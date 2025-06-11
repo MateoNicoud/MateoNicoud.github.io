@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*// <uniquifier>: Use a unique and descriptive class name*/
+/*// <weight>: Use a value from 400 to 700*/
+
+.pixelify-sans-text {
+                    font-family: "Pixelify Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+
+h1, h2 {
+    position: absolute;
+    z-index: 12;
+    text-shadow: black 10px 10px 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+h1 {
+    top: 50%;
+
+    left: 12.5%;
+    right: 12.5%;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+}
+
+h2 {
+    top: 30%;
+    left: 12.5%;
+    right: 12.5%;
+    font-size: 50px;
+    text-align: center;
+    position: absolute;
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 50px;
+        left: 0;
+        right: 0;
+    }
+
+    h2 {
+        font-size: 100px;
+        left: 0;
+        right: 0;
+    }
+}
+.animate-up {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 2s, opacity 2s;
+}
+
+.hidden {
+    transform: translateY(100px);
+    opacity: 0;
+}
+.delayed {
+    transition-delay: 0.5s;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 130vh;
+    overflow: hidden;
+}
+
+.images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+.image1 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/sky_fc.png');
+    z-index: 1;
+}
+
+.image2 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/far_mountains_fc.png');
+    z-index: 2;
+}
+
+.image3 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/grassy_mountains_fc.png');
+    z-index: 3;
+}
+
+.image4 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_mid_t_fc.png');
+    z-index: 4;
+}
+
+.image5 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_mid_fc.png');
+    z-index: 5;
+}
+
+.image6 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/hill.png');
+    z-index: 6;
+}
+
+.image7 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_front_t_fc.png');
+    z-index: 7;
+}
+
+.image8 {
+    background-image: url('./Images/Grassy_Mountains_Parallax_Background-vnitti/layers_fullcolor/clouds_front_fc.png');
+    z-index: 8;
+}
+
+/*---------------------*/
+#pdf {
+    background-color: #F47575;
+    font-size: 24px;
+    border-radius: 33px;
+    position: absolute;
+    left: 50%;
+    top: 125vh;
+    transform: translateX(-50%);
+    border-color: #d8f0f2;
+    border-width: 3px;
+    border-style: solid;
+    padding: 0 20px;
+    width: fit-content;
+    z-index: 14;
+    display: flex;
+
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+#pdf,.diplome{
+    font-family: 'Montserrat', serif;
+
+}
+@media (min-width: 1200px) {
+    #pdf {
+        flex-direction: row;
+
+        justify-content: center;
+    }
+}
+
+#pdf:hover {
+    background-color: #f76767;
+}
+
+.pdf {
+    text-decoration: none;
+    color: black;
+
+}
+
+.aboutMe, #me {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* */
+main {
+}
+
+/*body::after{*/
+/*    content: '';*/
+/*    height: 2px;*/
+/*    position: fixed;*/
+/*    top: calc(50% - 1px);*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    background-color: red;*/
+/*    z-index: 10;*/
+/*}*/
+
+
+/*---------------------*/
+/* Styles de base */
+#presentation {
+    background-color: #343434;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: grid;
+    background-image: url('./Images/mateGrand.webp');
+    background-size: 68vh;
+    overflow: hidden;
+    text-align: justify;
+
+}
+
+.aboutMe {
+    color: white;
+    display: none;
+}
+
+.aboutMe > h3 {
+    font-size: 50px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-bottom: 15%;
+}
+
+.aboutMe > p {
+    font-size: 24px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding: 10px;
+
+}
+
+@media (min-width: 800px) {
+    #presentation {
+        background-image: url('./Images/mateGrand.webp');
+        height: 70vh;
+        background-size: 65vh;
+
+
+        margin-top: 0;
+    }
+
+    .aboutMe {
+        margin-top: 6%;
+        display: block;
+    }
+
+    .aboutMe p {
+        font-size: 18px;
+        margin-top: 80px;
+    }
+
+    .aboutMe h3 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #presentation {
+        background-image: url('./Images/mateGrand.webp');
+        height: 70vh;
+    }
+
+    .aboutMe {
+        margin-top: 3%;
+        display: block;
+    }
+
+    .aboutMe > h3 {
+        font-size: 50px;
+        margin-bottom: 11%;
+
+    }
+
+    .aboutMe > p {
+        font-size: 24px;
+        margin-top: 0;
+
+    }
+}
+
+@media (min-width: 1500px) {
+    #presentation {
+        background-image: url('./Images/mateGrand.webp');
+        height: 70vh;
+    }
+
+    .aboutMe {
+        margin-top: 3%;
+        display: block;
+    }
+    .aboutMe > h3 {
+        margin-bottom: 8%;
+    }
+
+}
+@media (min-width: 2000px) {
+    #presentation {
+        background-image: url('./Images/mateGrand.webp');
+        height: 70vh;
+    }
+
+    .aboutMe {
+        display: block;
+    }
+    .aboutMe > h3 {
+        margin-bottom: 18%;
+
+
+        font-size: 50px;
+    }
+    #pdf {
+        top: 126vh;
+    }
+
+
+}
+
+
+/*---------------------*/
+#logoCampus {
+    border-bottom: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#logoCampus > h3 {
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
+#skills{
+    background-color: #e0e0e0;
+}
+
+.mySkills {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: xxx-large;
+}
+
+.skillCard {
+    height: 100%;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+    .skillCard {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+#scrollDown {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 13;
+}
+
+.containerCard {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    perspective: 800px;
+    border-radius: 4px;
+    transition: transform 0.5s;
+}
+
+.containerCard:hover {
+    transform: translateY(-10px);
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.card div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #47525D;
+}
+.card .front span {
+    font-weight: bold;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+
+}
+
+.card .back span {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.languages {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 120px;
+    gap: 30px;
+    padding-bottom: 150px;
+}
+@media (min-width: 1000px) {
+    .languages {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: none;
+        gap: 0;
+    }
+}
+
+.languages div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diplome {
+
+    position: relative;
+    display: inline-block;
+    padding: 15px 25px;
+    color: #fff;
+    background-color: #0071EB;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.diplome:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.ldiplome, .ldiplome span {
+    text-decoration: none;
+
+    color: #fff;
+}
+
+
+/*---------------------*/
+#me {
+    background-color: #343434;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    overflow: hidden;
+    text-align: justify;
+
+}
+#me div{
+    margin-left: 12.5% ;
+    margin-right: 12.5% ;
+}
+#me div h3{
+    color: white;
+    text-shadow: black 2px 2px 2px;
+    padding-bottom: 100px;
+    font-size: 36px;
+}
+#me div p{
+    color: white;
+    padding-bottom: 50px;
+    font-size: 22px;
+
+}
+
+/*---------------------*/
+
+
+footer {
+    background-color: #e0e0e0;
+
+padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding-bottom: 80px;
+    font-family: Roboto,sans-serif;
+    font-weight: bold;
+
+}
+#footer-title {
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    border-bottom: black 1px solid;
+    padding-bottom: 20px;
+    margin-bottom: 90px;
+}
+.liens {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-grid div div a{
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.footer-grid div div a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.footer-grid {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.footer-grid div div a {
+display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+}
+
+@media (min-width: 768px) {
+    .footer-grid .text {
+        text-align: right;
+    }
+}
